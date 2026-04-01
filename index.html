@@ -8,39 +8,60 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: #fff;
 }
 
-/* HERO */
+/* HERO SECTION WITH IMAGE */
 .hero {
-    background: linear-gradient(to right, #ff9800, #6a0dad);
+    background: url('hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 80px;
+    position: relative;
+}
+
+/* DARK OVERLAY */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* CONTENT INSIDE HERO */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
     color: white;
-    text-align: center;
-    padding: 80px 20px;
 }
 
 .hero h1 {
-    font-size: 42px;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
 .hero p {
     font-size: 18px;
+    margin-bottom: 20px;
 }
 
-/* BUTTON */
+/* BUTTONS */
 .btn {
     background: white;
     color: #6a0dad;
-    padding: 12px 25px;
-    margin-top: 20px;
-    display: inline-block;
+    padding: 12px 20px;
     text-decoration: none;
+    margin-right: 10px;
     border-radius: 5px;
     font-weight: bold;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
     padding: 60px 20px;
     text-align: center;
@@ -48,15 +69,14 @@ body {
 
 .section h2 {
     color: #6a0dad;
-    margin-bottom: 20px;
 }
 
 /* CARDS */
 .cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -80,6 +100,19 @@ body {
     padding: 20px;
     background: #eee;
 }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+}
 </style>
 </head>
 
@@ -87,18 +120,23 @@ body {
 
 <!-- HERO -->
 <div class="hero">
-    <h1>Mwanga wa Dada Initiative</h1>
-    <p>Lighting the Path for Every Girl</p>
-    <p>Empowering rural girls through mentorship, dignity, and digital access</p>
-    <a href="#" class="btn">Get Involved</a>
-    <a href="#" class="btn">About</a>
-    <a href="#" class="btn">Programs</a>
+    <div class="hero-content">
+        <h1>Mwanga wa Dada Initiative</h1>
+        <p><strong>Lighting the Path for Every Girl</strong></p>
+        <p>Empowering rural girls through mentorship, dignity, and digital access</p>
+
+        <a href="#" class="btn">Get Involved</a>
+        <a href="about.html" class="btn">About</a>
+        <a href="programs.html" class="btn">Programs</a>
+    </div>
 </div>
 
 <!-- PROBLEM -->
 <div class="section">
     <h2>The Reality</h2>
-    <p>Many girls in rural communities face barriers that limit their future — from lack of mentorship to menstrual health challenges and limited digital exposure.</p>
+    <p>
+        Many girls in rural communities face barriers that limit their future — from lack of mentorship to menstrual health challenges and limited digital exposure.
+    </p>
 </div>
 
 <!-- SOLUTION -->
@@ -131,7 +169,8 @@ body {
 <div class="section">
     <h2>Contact</h2>
     <p>Melisa Wanzala</p>
-    <p>Email: your@email.com</p>
+    <p>Email: millyatela@gmail.com</p>
+    <p>Phone: +254719862729</p>
 </div>
 
 <div class="footer">
