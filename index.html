@@ -12,12 +12,15 @@ body {
 
 /* HERO SECTION WITH IMAGE */
 .hero {
-    background: url('hero.jpg') no-repeat center center/cover;
-    height: 50vh;
+    background: url('hero.jpg') no-repeat center center;
+    background-size: contain; /* shows full image */
+    background-color: #f5f5f5; /* fills empty space */
+    
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 80px;
+    padding: 40px 80px;
     position: relative;
 }
 
