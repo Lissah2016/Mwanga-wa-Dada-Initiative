@@ -7,119 +7,150 @@
 <style>
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-/* HERO SECTION WITH IMAGE */
-.hero {
-    background: url('hero.png') no-repeat center;
-    background-size: cover; /* fills full width */
-    
-    height: 30vh;
-    
+/* NAVBAR */
+.navbar {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-end;
-    padding: 0 80px;
+    padding: 15px 40px;
+    background: white;
+}
+
+.navbar h2 {
+    color: #6a0dad;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.donate-btn {
+    background: #0aa;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
     position: relative;
+    height: 80vh;
+    background: url('hero.jpg') no-repeat center/cover;
 }
 
 /* DARK OVERLAY */
 .hero::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    inset: 0;
+    background: rgba(0,0,0,0.4);
 }
 
-/* CONTENT INSIDE HERO */
-.hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 500px;
+/* DONATION CARD */
+.donation-box {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 25px;
+    width: 300px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.donation-box h3 {
+    margin-bottom: 15px;
+}
+
+.amounts button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+}
+
+.amounts button.active {
+    background: red;
     color: white;
 }
 
-.hero h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-/* BUTTONS */
-.btn {
-    background: white;
-    color: #6a0dad;
-    padding: 12px 20px;
-    text-decoration: none;
-    margin-right: 10px;
-    border-radius: 5px;
+.donate-now {
+    width: 100%;
+    padding: 15px;
+    background: teal;
+    color: white;
+    border: none;
+    margin-top: 15px;
     font-weight: bold;
 }
 
-/* SECTION */
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.section h2 {
-    color: #6a0dad;
-}
-
-/* CARDS */
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: #f5f5f5;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-}
-
-/* CTA */
-.cta {
-    background: #6a0dad;
+/* HERO TEXT */
+.hero-text {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
     color: white;
-    padding: 60px 20px;
-    text-align: center;
+    z-index: 2;
+    max-width: 500px;
 }
 
-/* FOOTER */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background: #eee;
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-    .hero {
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
+.hero-text h1 {
+    font-size: 40px;
 }
 </style>
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>Mwanga wa Dada</h2>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Programs</a>
+    </div>
+
+    <a href="#" class="donate-btn">Donate</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+
+    <!-- LEFT TEXT -->
+    <div class="hero-text">
+        <h1>Empowering Rural Girls</h1>
+        <p>Through mentorship, dignity, and digital access</p>
+    </div>
+
+    <!-- DONATION CARD -->
+    <div class="donation-box">
+        <h3>Support a Girl Today</h3>
+
+        <div class="amounts">
+            <button>KES 500</button>
+            <button>KES 1,000</button>
+            <button class="active">KES 2,000</button>
+        </div>
+
+        <p>This can support sanitary kits and mentorship sessions</p>
+
+        <button class="donate-now">Donate Now</button>
+    </div>
+
+</div>
+
+</body>
+</html>
 
 <!-- HERO -->
 <div class="hero">
