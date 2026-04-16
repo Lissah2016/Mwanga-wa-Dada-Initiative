@@ -110,7 +110,36 @@ body {
     font-size: 28px;
     margin: 0;
 }
+/* LOGO CONTAINER */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
+/* MARQUEE */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 220px; /* controls visible area */
+}
+
+.marquee-text {
+    display: inline-block;
+    animation: scroll 12s linear infinite;
+    font-weight: bold;
+    color: #6a0dad;
+}
+
+/* ANIMATION */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
 /* DONATION BOX */
 .donation-box {
     position: absolute;
@@ -269,7 +298,13 @@ body {
 
     <div class="logo-container">
         <img src="logo.png" alt="Logo">
-        <span>Lighting the path for every Girl</span>
+
+        <div class="marquee">
+            <div class="marquee-text">
+                Lighting the Path for Every Girl &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+                Lighting the Path for Every Girl
+            </div>
+        </div>
     </div>
 <div class="nav-links">
 
