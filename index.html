@@ -34,8 +34,9 @@ body {
     background: rgba(255,255,255,0.6);
     padding: 5px 10px;
     border-radius: 8px;
+    text-decoration: none; /* removes underline */
+    color: inherit;        /* keeps text color */
 }
-
 /* LOGO IMAGE */
 .logo-container img {
     height: 60px;   /* balanced size */
@@ -261,7 +262,7 @@ body {
     color: black;
 }
 
-.dropdown-content a:hover {
+.dropdown-content a: hover {
     background: #f5f5f5;
 }
 .dropdown-toggle {
@@ -271,7 +272,7 @@ body {
 }
 
 /* SHOW ON HOVER */
-.dropdown:hover .dropdown-content {
+.dropdown: hover .dropdown-content {
     display: block;
 }
 /* MOBILE */
@@ -314,10 +315,10 @@ body {
 
 <!-- NAVBAR -->
 <div class="navbar">
-
-    <div class="logo-container">
-        <img src="logo.jpg">
-
+<a href="index.html" class="logo-container">
+    <img src="logo.png" alt="Logo">
+    <span>Lighting the Path for Every Girl</span>
+</a>
        <!-- <div class="marquee">
             <div class="marquee-text">
                 Lighting the Path for Every Girl &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
